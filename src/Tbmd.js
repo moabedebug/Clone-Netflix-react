@@ -24,27 +24,27 @@ export default {
             {
                 slug: 'action',
                 title: 'Ação',
-                items: []     
+                items: await basicFetch(`/movie/top_rated?language=pt-BR&api-key=${API_KEY}`)     
             },
             {
                 slug: 'comedy',
                 title: 'Comédia',
-                items: []     
+                items: await basicFetch(`/`)    
             },
             {
                 slug: 'horror',
                 title: 'Terror',
-                items: []     
+                items: await basicFetch(`/`)
             },
             {
                 slug: 'romance',
                 title: 'Romance',
-                items: []     
+                items: await basicFetch(`/`)     
             },
             {
                 slug: 'documentary',
                 title: 'Documentários',
-                items: []     
+                items: await basicFetch(`/`)     
             },
 
         ]
