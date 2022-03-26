@@ -5,6 +5,7 @@ import "./App.css"
 
 import MovieRow from "./components/MovieRow";
 import FeuturedMovie from "./components/FeuturedMovie";
+import Header from "./components/Header";
 
 
 export default () => {
@@ -29,6 +30,8 @@ export default () => {
 
   return(
     <div className="page">
+
+      <Header />
 
       {featuredData && 
         <FeuturedMovie item={featuredData} />
