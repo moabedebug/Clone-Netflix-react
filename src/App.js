@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import "./App.css"
 import Tmbd from "./Tmbd"
 import MovieRow from "./components/MovieRow";
+import FeuturedMovie from "./components/FeuturedMovie";
 
 
 export default () => {
 
   const [movieList, setMovieList] = useState([])
+  const [featuredData, setFeaturedData] = useState(null)
 
   useEffect(()=>{
     const loadAll = async () => {
@@ -18,6 +20,11 @@ export default () => {
 
   return(
     <div className="page">
+
+      {featuredData && 
+        <FeuturedMovie item={featuredData} />
+      }
+
       <section className="lists">
         {movieList.map((item, key) => (
             <MovieRow key={key} title={item.title } items={item.items} />     
