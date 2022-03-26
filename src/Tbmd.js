@@ -34,22 +34,22 @@ export default {
             {
                 slug: 'comedy',
                 title: 'Comédia',
-                items: await basicFetch(`/`)    
+                items: await basicFetch(`/discober/movie?with_genres=35?language=pt-BR&api-key=${API_KEY}`)    
             },
             {
                 slug: 'horror',
                 title: 'Terror',
-                items: await basicFetch(`/`)
+                items: await basicFetch(`/discober/movie?with_genres=27?language=pt-BR&api-key=${API_KEY}`)
             },
             {
                 slug: 'romance',
                 title: 'Romance',
-                items: await basicFetch(`/`)     
+                items: await basicFetch(`/discober/movie?with_genres=10749?language=pt-BR&api-key=${API_KEY}`)     
             },
             {
                 slug: 'documentary',
                 title: 'Documentários',
-                items: await basicFetch(`/`)     
+                items: await basicFetch(`/discober/movie?with_genres=99?language=pt-BR&api-key=${API_KEY}`)     
             },
 
         ]
