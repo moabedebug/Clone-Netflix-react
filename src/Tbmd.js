@@ -29,7 +29,7 @@ export default {
             {
                 slug: 'action',
                 title: 'Ação',
-                items: await basicFetch(`?language=pt-BR&api-key=${API_KEY}`)     
+                items: await basicFetch(`/discober/movie?with_genres=28?language=pt-BR&api-key=${API_KEY}`)     
             },
             {
                 slug: 'comedy',
