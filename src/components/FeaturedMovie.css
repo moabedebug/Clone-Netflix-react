@@ -11,13 +11,14 @@
 .featured--horizontal {
     width: inherit;
     height: inherit;
-    background: linear-gradient(to right, #111 25%, transparent 70%);
+    background: linear-gradient(to right, #000 25%, transparent 70%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 30px;
     padding-bottom: 150px;
 }
+
 .featured--name {
     font-weight: bold;
     font-size: 60px;
