@@ -12,6 +12,7 @@ export default () => {
 
   const [movieList, setMovieList] = useState([])
   const [featuredData, setFeaturedData] = useState(null)
+  const [blackHeader, setBlackHeader] = useState(false)
 
   useEffect(()=>{
     const loadAll = async () => {
@@ -28,10 +29,26 @@ export default () => {
     loadAll()
   },[])
 
+  useEffect(() => {
+    const scrollListenner = () => {
+      if(window.scrollY > 10) {
+        setBlackHeader(true)
+      } else {
+        setBlackHeader(false)
+      }
+    }
+
+    window.addEventListener('scroll', scrollListenner)
+
+    return () => {
+      window.removeEventListener('scroll', scrollListenner)
+    }
+  },[])
+
   return(
     <div className="page">
 
-      <Header />
+      <Header black={blackHeader} />
 
       {featuredData && 
         <FeuturedMovie item={featuredData} />
