@@ -4,7 +4,7 @@ import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore"
 import NavigateNextIcon from '@material-ui/icons/NavigateNext'
 
 export default ({title, items}) => {
-    const [scrollX, setScroolX] = useState(-400)
+    const [scrollX, setScroolX] = useState(0)
 
     const handleLeftArrow = () => {
         let x = scrollX + Math.round(window.innerWidth / 2)
